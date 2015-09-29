@@ -21,44 +21,31 @@ killings.head()
 # 1. Make the following changed to column names:
 # lawenforcementagency -> agency
 # raceethnicity        -> race
-killings.rename(columns={'lawenforcementagency':'agency', 'raceethnicity':'race'}, inplace=True)
 
 # 2. Show the count of missing values in each column
-killings.isnull().sum()
 
 # 3. replace each null value in the dataframe with the string "Unknown"
-killings=killings.fillna(value='Unknown')
 
 # 4. How many killings were there so far in 2015?
-killings[killings.year == 2015].info()
 
 # 5. Of all killings, how many were male and how many female?
-killings.gender.value_counts()
 
 # 6. How many killings were of unarmed people?
-killings.armed.value_counts()
 
 # 7. What percentage of all killings were unarmed?
-len(killings.armed=='No')/float(len(killings))
 
 # 8. What are the 5 states with the most killings?
-killings.state.value_counts()
 
 # 9. Show a value counts of deaths for each race
-killings.race.value_counts()
 
 # 10. Display a histogram of ages of all killings
-killings.age.hist()
 
 # 11. Show 6 histograms of ages by race
-killings.age.hist(by=killings.race, sharex=True, sharey=True)
 
 # 12. What is the average age of death by race?
-killings.groupby('race').age.mean()
 
 # 13. Show a bar chart with counts of deaths every month
-killings.month.value_counts().plot(kind='bar')
-plt.show()
+
 
 
 ###################
