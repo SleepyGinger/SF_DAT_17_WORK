@@ -1,0 +1,5 @@
+scoring articles - have news articles automatically scored for different qualities. For example how related the articles has to do with a specific topic or company. Being able to make a graph of a certain topic over time. I chose this topic because I work for a PR company and they have a large database of news articles. 
+
+cluster audio files into similar sounding files. I have dozens of recording of different subway conductors saying "please stand clear of the closeing doors". I would like to organize them into similar sounding groups.
+
+scraping youtube views/time for trending video - could associate video titles with view count. Whenever I look at a good youtube video I always look into the authors uploaded videos to see what other popular videos they have. But if an old video has as many views as a recent video I will view that one first.
