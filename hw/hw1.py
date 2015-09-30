@@ -69,13 +69,16 @@ majors = pd.read_csv('hw/data/college-majors.csv')
 majors.head()
 
 # 1. Delete the columns (employed_full_time_year_round, major_code)
+majors.drop(['Employed_full_time_year_round', 'Major_code'], axis=1, inplace=True)
 
 # 2. Show the cout of missing values in each column
+majors.isnull().sum()
 
 # 3. What are the top 10 highest paying majors?
+majors.sort_index(by='median', ascending=False).head(10)
 
 # 4. Plot the data from the last question in a bar chart, include proper title, and labels!
-
+majors.sort_index(by='median', ascending=False).head(10).plot(x='major', y='median', kind='bar', title='supa title')
 
 # 5. What is the average median salary for each major category?
 
