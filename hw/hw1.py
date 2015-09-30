@@ -84,25 +84,32 @@ majors.sort_index(by='median', ascending=False).head(10).plot(x='major', y='medi
 majors.groupby('major_category')[['median']].mean()
 
 # 6. Show only the top 5 paying major categories
-majors.groupby('major_category')[['median']].mean().sort_index(by='median', ascending=False).head(5)
+majors.groupby('major_category')[['median']].mean().order(ascending=False).head(5)
 
 # 7. Plot a histogram of the distribution of median salaries
 majors.mmedian.hist()
 
 # 8. Plot a histogram of the distribution of median salaries by major category
-
+majors.groupby('major_category')['mmedian'].mean().order(ascending=False).plot(kind='bar')
 
 # 9. What are the top 10 most UNemployed majors?
 # What are the unemployment rates?
+majors.groupby('major')[['unemployed']].sum().sort_index(by='unemployed', ascending=False).head(10)
+majors.groupby('major')[['unemployment_rate']].sum().sort_index(by='unemployment_rate', ascending=False).head(10)
 
 # 10. What are the top 10 most UNemployed majors CATEGORIES? Use the mean for each category
 # What are the unemployment rates?
+majors.groupby('major_category')[['unemployed']].mean().sort_index(by='unemployed', ascending=False).head(10)
+majors.groupby('major_category')[['unemployment_rate']].mean().sort_index(by='unemployment_rate', ascending=False).head(10)
 
 # 11. the total and employed column refer to the people that were surveyed.
 # Create a new column showing the emlpoyment rate of the people surveyed for each major
 # call it "sample_employment_rate"
 # Example the first row has total: 128148 and employed: 90245. it's 
 # sample_employment_rate should be 90245.0 / 128148.0 = .7042
+majors['sample_employment_rate']=majors.employed/majors.total
+
 
 # 12. Create a "sample_unemployment_rate" colun
 # this column should be 1 - "sample_employment_rate"
+majors['sample_unemployment_rate']=1-majors.sample_employment_rate
