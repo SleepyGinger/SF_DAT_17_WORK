@@ -81,12 +81,16 @@ majors.sort_index(by='median', ascending=False).head(10)
 majors.sort_index(by='median', ascending=False).head(10).plot(x='major', y='median', kind='bar', title='supa title')
 
 # 5. What is the average median salary for each major category?
+majors.groupby('major_category')[['median']].mean()
 
 # 6. Show only the top 5 paying major categories
+majors.groupby('major_category')[['median']].mean().sort_index(by='median', ascending=False).head(5)
 
 # 7. Plot a histogram of the distribution of median salaries
+majors.mmedian.hist()
 
 # 8. Plot a histogram of the distribution of median salaries by major category
+
 
 # 9. What are the top 10 most UNemployed majors?
 # What are the unemployment rates?
