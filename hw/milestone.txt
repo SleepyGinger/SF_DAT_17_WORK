@@ -1,5 +1,23 @@
-scoring articles - have news articles automatically scored for different qualities. For example how related the articles has to do with a specific topic or company. Being able to make a graph of a certain topic over time. I chose this topic because I work for a PR company and they have a large database of news articles. 
+I will be working on both projects, but my heart is in the Youtube one, but not sure how I can use machine learning
+techniques learned.
 
-cluster audio files into similar sounding files. I have dozens of recording of different subway conductors saying "please stand clear of the closeing doors". I would like to organize them into similar sounding groups.
+NLTK
 
-scraping youtube views/time for trending video - could associate video titles with view count. Whenever I look at a good youtube video I always look into the authors uploaded videos to see what other popular videos they have. But if an old video has as many views as a recent video I will view that one first.
+When exporting news about a certain topic a lot of trash is incorporated. Traditionally finding the trash meant either manually looking through each article or using boolean search methods. Using boolean restricts how many articles comes in. I would like to use machine learning to swift through all the trash and take out only relevant articles.
+
+Once relevant articles are exported, I would like to take out interesting words and graph that throught time.
+
+https://github.com/SleepyGinger/NLTK
+
+YOUTUBE
+
+When looking at a user's youtube video page finding popular videos by that author is difficuly. Youtube offers
+sorting videos by view count and date published. In this program I have utlilized the view count along with, like
+count, dislike count, and comment count to make finding the most interesting video easier.
+
+You can also find videos via the search method so you are not limited to one user's videos.
+
+I would like to incorporate tags (up too 10 words defined by the user), title of the video, and description.
+
+A working program is at https://github.com/SleepyGinger/youtube_stats. If you have trouble getting your API Key
+message me and I can give you mine.)
