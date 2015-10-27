@@ -8,3 +8,5 @@ You can also find videos via the search method so you are not limited to one use
 
 I would like to incorporate tags (up too 10 words defined by the user), title of the video, and description.
 
+A working program is at https://github.com/SleepyGinger/youtube_stats. If you have trouble getting your API Key
+message me and I can give you mine.
